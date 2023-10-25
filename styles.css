@@ -21,6 +21,7 @@ body {
   align-items: center;
 }
 #chart {
+  position: relative;
   border: 1px solid #969696;
   box-shadow: 0 0 10px #ccc;
 }
@@ -59,4 +60,11 @@ body {
 .btn:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
+}
+footer{
+  color: #2231a3;
+  width: 100%;
+  padding: 5px 5rem;
+  text-align: end;
+  font-weight: 600;
 }

@@ -371,12 +371,10 @@ originalData.forEach(function (dataPoint) {
   // Parse date and time from the input data
   var dateTime = new Date(dataPoint["Date and Time of Prediction"]);
 
-  // Extract hours and minutes to create a time string (HH:MM)
   var hours = dateTime.getHours().toString().padStart(2, "0");
   var minutes = dateTime.getMinutes().toString().padStart(2, "0");
   var timeString = hours + ":" + minutes;
 
-  // Convert string prices to numbers
   var actualPrice = parseFloat(dataPoint["Actual Price"]);
   var predictedPrice = parseFloat(dataPoint["Predicted Price"]);
   console.log(timeString);
@@ -411,8 +409,8 @@ for (var i = 0; i < xData.length; i++) {
     },
   };
   var result2 = {
-    x: [xData[i][0], xData[i][11]],
-    y: [yData[i][0], yData[i][11]],
+    x: [xData[i][0], xData[i][66]],
+    y: [yData[i][0], yData[i][66]],
     type: "scatter",
     mode: "markers",
     marker: {
@@ -424,20 +422,20 @@ for (var i = 0; i < xData.length; i++) {
 }
 
 var layout = {
-  showlegend: false,
-  height: 550,
+  showlegend: true,
+  height: 500,
   width: 1100,
   xaxis: {
     showline: true,
-    showgrid: false,
+    showgrid: true,
     showticklabels: true,
     linecolor: "rgb(204,204,204)",
     linewidth: 2,
-    autotick: false,
+    autotick: true,
     ticks: "outside",
     tickcolor: "rgb(204,204,204)",
     tickwidth: 2,
-    ticklen: 5,
+    ticklen: 15,
     tickfont: {
       family: "Poppins",
       size: 12,
@@ -445,16 +443,16 @@ var layout = {
     },
   },
   yaxis: {
-    showgrid: false,
+    showgrid: true,
     zeroline: false,
     showline: false,
     showticklabels: false,
-    range: [423.1, 424.5],
+    range: [423.1, 424.4],
   },
   autosize: false,
   margin: {
-    autoexpand: false,
-    l: 100,
+    autoexpand: true,
+    l: 80,
     r: 20,
     t: 100,
   },
@@ -466,29 +464,29 @@ var layout = {
       y: 1.05,
       xanchor: "left",
       yanchor: "bottom",
-      text: "Prediction model",
+      text: "SPY Prediction",
       font: {
         family: "Poppins",
-        size: 30,
+        size: 25,
         color: "rgb(37,37,37)",
       },
       showarrow: false,
     },
-    {
-      xref: "paper",
-      yref: "paper",
-      x: 0.5,
-      y: -0.1,
-      xanchor: "center",
-      yanchor: "top",
-      text: "Source: Syntalix Study",
-      showarrow: false,
-      font: {
-        family: "Poppins",
-        size: 12,
-        color: "rgb(150,150,150)",
-      },
-    },
+    // {
+    //   xref: "paper",
+    //   yref: "paper",
+    //   x: 0.5,
+    //   y: -0.1,
+    //   xanchor: "center",
+    //   yanchor: "top",
+    //   text: "Source: Syntalix Study",
+    //   showarrow: false,
+    //   font: {
+    //     family: "Poppins",
+    //     size: 12,
+    //     color: "rgb(150,150,150)",
+    //   },
+    // },
   ],
 };
 //graph outline
