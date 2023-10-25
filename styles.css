@@ -39,7 +39,7 @@ body {
   color: #fff;
   margin: 1rem auto;
   padding: 0.8rem 2rem;
-  transition: box-shadow 0.15s, transform 0.15s;
+  transition: all 0.2s;
   user-select: none;
   -webkit-user-select: none;
   will-change: box-shadow, transform;
@@ -61,10 +61,15 @@ body {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
-footer{
-  color: #2231a3;
+footer {
+  color: #3a28e2;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  padding: 5px 5rem;
+  padding: 5px 5rem 1rem;
   text-align: end;
-  font-weight: 600;
+  font-weight: 400;
+}
+footer span {
+  font-weight: 700;
 }
